@@ -16,10 +16,11 @@ $mailheader = "From:".$name."<".$email.">\r\n";
 $recipient = "lawassi@yahoo.com";
 
 
-mail($recipient, $subject, $message, $mailheader)
-or die("Error");
+if (mail($recipient, $subject, $message, $mailheader)){
+echo " Envoyer avec succes. Merci a vous.";
+}
+else{
+    echo " Erreur d' envoie"
+}
 
-echo" Envoyer avec succes. Merci a vous.";
-
-
->
+?>
